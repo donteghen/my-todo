@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-todo-17408": {
+      "hosting": {
+        "my-todo": [
+          "my-todo-17408"
+        ]
+      }
+    }
+  }
+}

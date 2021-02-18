@@ -10,7 +10,7 @@ import { Task } from '../models/task';
 })
 export class TaskComponent implements OnInit {
 @Input() task: Task;
-@Output() edit : EventEmitter<any> =  new EventEmitter();
+@Output() edit : EventEmitter<Task> =  new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {

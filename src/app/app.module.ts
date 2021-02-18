@@ -10,16 +10,28 @@ import {MatCardModule} from '@angular/material/card';
 import { TaskComponent } from './task/task.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatButtonModule} from '@angular/material/button'
+import {MatDialogModule} from '@angular/material/dialog';
+import { TaskDialogComponent } from './task-dialog/task-dialog.component'
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input'
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent
+    TaskComponent,
+    TaskDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatIconModule, MatToolbarModule,MatCardModule,DragDropModule,MatButtonModule
+    BrowserAnimationsModule,MatIconModule, MatToolbarModule,MatCardModule,DragDropModule,
+    MatButtonModule,MatDialogModule,MatInputModule,MatFormFieldModule, CommonModule, FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
